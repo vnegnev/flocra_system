@@ -1,0 +1,24 @@
+#+TITLE: flocra_system
+
+* Cloning
+
+  To clone the repo and its submodules:
+
+  #+begin_src sh
+  git clone https://github.com/catkira/flocra_system --recurse-submodules  
+  #+end_src
+
+  To build the repo:
+
+  - Install Vivado 2019.2 or newer (don't need Vitis or the other tools, and only need Zynq FPGA support) to =/opt=
+
+  - Download the XSCT standalone tools from https://petalinux.xilinx.com/sswreleases/rel-v2020/xsct-trim/xsct-2020-2.tar.xz and extract them into =/opt/Xilinx=
+
+  - If running on Arch Linux or similar, install =xorg-xlsclients=
+
+  #+begin_src sh
+  cd hdl
+  . /opt/Xilinx/Vivado/2019.2/settings64.sh
+  export PATH=/opt/Xilinx/Vitis/2020.2/bin:$PATH
+  make
+  #+end_src
